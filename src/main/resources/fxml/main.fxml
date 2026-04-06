@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.MainController">
+
+    <Label fx:id="titleLabel" text="Fuel Calculator"/>
+
+    <TextField fx:id="distanceField" promptText="Distance"/>
+    <TextField fx:id="consumptionField" promptText="Consumption"/>
+    <TextField fx:id="priceField" promptText="Price"/>
+
+    <Button fx:id="calculateButton" text="Calculate"
+            onAction="#handleCalculate"/>
+
+    <Label fx:id="resultLabel"/>
+
+    <HBox spacing="5">
+        <Button text="EN" onAction="#setEnglish"/>
+        <Button text="FR" onAction="#setFrench"/>
+        <Button text="JP" onAction="#setJapanese"/>
+        <Button text="IR" onAction="#setPersian"/>
+    </HBox>
+
+</VBox>
