@@ -1,4 +1,7 @@
-FROM ubuntu:latest
-LABEL authors="eLeet"
+FROM maven:3.9.6-eclipse-temurin-17
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY . .
+
+RUN mvn clean package -DskipTests
